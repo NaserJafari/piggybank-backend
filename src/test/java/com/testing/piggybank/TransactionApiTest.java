@@ -24,7 +24,7 @@ public class TransactionApiTest {
         ResponseEntity<GetTransactionsResponse> response = restTemplate
             .getForEntity("/api/v1/transactions/1", GetTransactionsResponse.class);
         Assertions.assertTrue(response.getStatusCode().is2xxSuccessful());
-        Assertions.assertEquals(4, Objects.requireNonNull(response.getBody()).getTransactions().size());
+        Assertions.assertEquals(5, Objects.requireNonNull(response.getBody()).getTransactions().size());
     }
 
     @Test
